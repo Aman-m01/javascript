@@ -1,0 +1,29 @@
+note --> javascript is a prototype based language.
+--> OOPS in JS
+-->Object
+    -- Collection of properties and method 
+    -- toLowerCase 
+
+-> Parts of OOPS 
+   Object literals 
+     --constructor function 
+     --prototype 
+     --classes 
+     --instances(new, this )
+
+--> pillars of OOPS 
+  --Abstraction -->it hides the details and showing the functionality 
+  --Inheritance 
+  --Encapsulation --> binding code and data together(wrapper)
+  --Polymorphism 
+
+  --> when we use the constructor function it gives a new instance 
+  --> when we use the new keyword firstly an empty object will creates which is also called instance.
+
+
+
+
+  note --> when the nested function doesn't call its function then its called the global execution, when we have access of window obj then it called the window obj but when we work on the node env then 'this' refers to the empty obj {}.
+                                                             window-> this -> window 
+                                                             node --> this --> {} 
+
