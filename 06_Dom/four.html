@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul class="language">
+      <li>JS</li>
+    </ul>
+  </body>
+  <script>
+    function addLang(langName) {
+      const li = document.createElement("li");
+      li.innerText = langName;
+      document.querySelector(".language").appendChild(li);
+    }
+    addLang("react");
+    addLang("python");
+
+    // //other --> optimized method **-> better approach than the above approach
+    function addOptiLanguage(langName) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(langName));
+      document.querySelector(".language").appendChild(li);
+    }
+    addOptiLanguage("typescript");
+
+    // //now edit and replace the child
+    const secondLang = document.querySelector("li:nth-child(2)");
+    //secondLang.innerHTML = "Rust"
+    const newLi = document.createElement("li");
+    newLi.textContent = "Rust";
+    secondLang.replaceWith(newLi);
+
+    // //edit--> remove the js to typescript
+    const firstLang = document.querySelector("li");
+    const newFirstLang = document.createElement("li");
+    newFirstLang.textContent = "typescript";
+    firstLang.replaceWith(newFirstLang);
+
+    // //another method to change it
+    // const language = document.querySelector('li:first-child')
+    // language.outerHTML = '<li>TYPESCRIPT</li>'
+
+    // const lang1 = document.querySelector('li:nth-child(3)')
+    // lang1.outerHTML = '<li>GO</li>'
+
+    // //REMOVE
+    const lastLang = document.querySelector("li:last-child");
+    lastLang.remove();
+  </script>
+</html>

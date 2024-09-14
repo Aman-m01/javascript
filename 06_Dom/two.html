@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child">Sunday</div>
+      <div class="child">Monday</div>
+      <div class="child">Tuesday</div>
+      <div class="child">Wednesday</div>
+      <div class="child">Thrusday</div>
+      <div class="child">Friday</div>
+      <div class="child">Saturday</div>
+    </div>
+  </body>
+  <script>
+    const parent = document.querySelector(".parent");
+    // console.log(parent)
+    // console.log(parent.children)
+    // console.log(parent.children[1].innerHTML)
+
+    // for(i=0 ; i<parent.children.length;i++){
+    //     console.log(parent.children[i].innerHTML)
+    // }
+
+    parent.children[1].style.backgroundColor = "red";
+    // console.log(parent.firstElementChild);
+    // console.log(parent.lastElementChild);
+
+    // const dayone = document.querySelector('.day')
+    // console.log(dayone)
+    // console.log(dayone.parentElement)
+    // console.log(dayone.nextElementSibling)
+
+    //   //it creates a complete complex structure of the nodes
+    console.log("NODES: ", parent.childNodes);
+  </script>
+</html>

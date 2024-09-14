@@ -1,0 +1,29 @@
+--> console.log(window)
+--> console.log(window.document)
+--> console.log(document)
+--> console.dir(document)
+--> getElemetById()
+--> getElemetByClassName()
+--> querySelector()
+--> querySelectorAll()
+--> nodeList and htmlCollection
+
+--> Array.from(value) is used to convert the element into array.
+--> to replace the inner html of the webpage we use console and use Document.getElementById('ID_name').innerHTML = <h1> data</h1>
+
+to initialize the content we use text value textContent.
+--> innerText show those text which is visible but textContent show all the text which may be hide by css property.
+
+--> querySelector('h1') -> it only select the first h1 on the page.
+--> querySelectorAll('h1') --> it select all the h1 of the page.
+
+--> querySelector are also used with all the selectors like id , class and other 
+--> document.querySelector('input[type="password"]') used for select the input selectors
+
+--> in nodeList we maximum use the foreach loops. map doesn't work. map can work if we can convert into an array.
+
+note--> chain the htmlCollection into array and then apply the for each loop and some actions.
+
+--> .children property is used to find the children vslues in html collection
+
+e.preventDefault is used to stop the default action --> used in form - here we use the submit addEventListener 

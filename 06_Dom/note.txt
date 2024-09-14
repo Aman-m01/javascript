@@ -1,0 +1,35 @@
+we can learn about the document model by using the console
+use browser and console.log(document)
+-- console.dir(document)
+--
+
+--> getElementById--> is used to find the data through ID
+--> to find the id we write in our console:
+                                          document.getElementById("idName")
+                                          document.getElementById("idName").id
+                                          document.getElementById("idName").className   -->> to find className we used it
+                                          document.getElementById("idName").class
+
+                                          document.getElementById("idname").getAttribute('id_name')  --> to find ID attribute 
+                                          document.getElementById("idname").getAttribute('Class_name')  --> to find Class attribute 
+                                          document.getElementById("idname").setAttribute('Class_name', 'classAttribute')  --> to set Class attribute 
+
+
+innerContent and innerText 
+in inner text only we see those content which are visible on our screen otherwise in innerContent we see all the content which are visible or hidden by using the css property.
+
+--> innerHtml support both html content with its tag and it display all the content with its tags.
+
+--> when we use the queryselector('h1'), then only the first h1 will be appeared.we can select the id and class using # and .
+queryselectorAll select all the items 
+
+
+when we using the queryselectorAll then it gives the elements as a Nodelist , here we apply the actions a/c to the nodelist no ----
+                   document.querySelectorAll('li')
+                   const list = document.querySelectorAll('li')
+                   list.style.backgroundColor = 'red'   --> it gives an error
+
+                   list[0].style.backgroundColor = 'yellow' --> here we put the index then it runs successfully.                 
+
+
+ 
