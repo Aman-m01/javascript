@@ -1,0 +1,18 @@
+control flow 
+
+comparison operator -->>  <,>,<=,>= , == ,!=, === ,!== 
+
+===(strict equal is used for the type checking.)
+
+
+note vvi ---
+falsy values--> false,0,-0, 0n, "" ,null ,undefined , NaN
+
+truthy values--> "0" , 'false' , " " , [] , {} , function(){} , 
+
+
+note --
+comparison 
+false == 0   //true 
+false == ''   //true 
+0 == ''     //true
