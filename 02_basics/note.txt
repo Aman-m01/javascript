@@ -1,0 +1,43 @@
+# array methods 
+## myarr.push(element_) -- it is used to add an element to the array 
+## myarr.pop() -- it remove the last element from the array 
+## unshift(_element) -- it is used to add the elements at starting point.
+## shift() -- it is uses to remove the first element from the arrays.
+
+## include(__)-- it is used to find the element is present in the array or not. it gives result in the form of true and false.
+
+## indexOf -- it defines that element isat the given index element is present or not.
+
+## slice and splice -- slice does not change the original array, splice makes changes in the original arrays.
+
+
+## push and concate-- push perform the action on the same array. concate performs their operation on new array.
+
+## when we have multiple strings inside one another then we just use the flat method -- flat(), in this method we defined the depth and we can also use infinty as depth.
+
+## .of() -- it returns a new array, set of elements. we can also use of() instead of from().
+
+## Array method -- is , from , of use mdn to know more about them(hw).
+
+
+
+# topics 
+objects 
+singleton
+
+
+##### object 
+## object.freeze() is used when we want no one can change our object data.
+
+## we can access the objects using . or [].
+
+const obj3=  Object.assign({},obj1 , obj2)
+console.log(obj3)
+const obj3=  Object.assign(obj1 , obj2)
+console.log(obj3)
+
+in the above case the result of both cases are same but there is a difference that in first case data we provide a blank object to store the data otherwise it will stored in the obj1.
+
+hasOwnProperty is used to find that object has those property or not.
+
+# functions 
