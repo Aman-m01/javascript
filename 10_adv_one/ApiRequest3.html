@@ -1,0 +1,43 @@
+<!-- practice error handling  -->
+<!-- error handling in js  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    const requestUrl = "https://jsonplaceholder.typicode.com/posts";
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", requestUrl); // method , request on the url
+    // console.log(xhr.readyState)
+    xhr.onload = function () {
+      if (xhr.status >= 200 && xhr.status < 300) {
+        const responseData = JSON.parse(xhr.response);
+        console.log(responseData);
+        const id = responseData[7].id;
+        //  console.log(id)
+        const requestUrl2 = `${requestUrl}/${id}`;
+        const xhr2 = new XMLHttpRequest();
+        xhr2.open("GET", requestUrl2);
+        console.log(requestUrl2);
+
+        xhr2.onload = () => {
+          const responseData2 = JSON.parse(xhr2.response);
+          console.log(responseData2);
+        };
+
+        xhr2.send();
+      } else {
+        console.log("Something went wrong!!!");
+      }
+
+      xhr.onerror = () => {
+        console.log("Network Error!!!");
+      };
+    };
+    xhr.send();
+  </script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    const url = "https://jsonplaceholder.typicode.com/posts";
+    const xhr = new XMLHttpRequest();
+    // console.log(xhr);
+    // console.log(xhr.readyState)
+
+    xhr.open("GET", url);
+    // console.log(xhr.readyState)
+
+    // xhr.onreadystatechange = function(){
+    //     if(xhr.readyState === 4){
+    //         const response = xhr.response
+    //         const data = JSON.parse(response)  // to change the data from string to json we use the JSON.parse() method
+    //         console.log( data)
+    //     }
+    // }
+
+    // // we can also use onload instead of the if condition to check the readystate and then run code. onload works when the readyState become 4.
+    xhr.onload = function () {
+      // console.log(xhr.readyState)
+      const response = xhr.response;
+      const data = JSON.parse(response);
+      // console.log(data)
+    };
+
+    xhr.send();
+  </script>
+</html>

@@ -1,0 +1,2 @@
+# xhr
+ XHR, or XMLHttpRequest, is a JavaScript object that allows web pages to make HTTP requests to servers and load data without refreshing the page. This capability is fundamental for implementing dynamic web applications, enabling asynchronous data exchange between the client and server. 

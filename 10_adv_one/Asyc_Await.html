@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    // // Async await
+
+    //  fetch(request_url)
+    //     .then((response) => response.json())     //it return the response.json
+    //     .then((data)=>{
+    //         console.log(data)
+    //     })
+
+    const request_url = "https://jsonplaceholder.typicode.com/posts";
+    // async function fetchData(){
+    //    const response =  await fetch(request_url)
+    //    if(!response.ok){
+    //     throw new Error("error occured!!!")
+    //    }
+    //    const data = response.json()
+    //    return data;
+
+    // }
+    
+
+    // // by using arrow functions
+    const fetchData = async () => {
+      const response = await fetch(request_url);
+      if (!response.ok) {
+        throw new Error("error occured!!!");
+      }
+      const data = response.json();
+      return data;
+    };
+
+    fetchData()
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  </script>
+</html>

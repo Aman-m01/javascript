@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgb(247, 253, 253);
+    }
+    .container {
+      border: 1px;
+      border-radius: 20px;
+      box-shadow: 0px 1px 3px;
+      height: 300px;
+      width: 250px;
+      text-align: center;
+      display: grid;
+      padding: 10px;
+      justify-content: center;
+      box-shadow: 0px 2px 5px 3px rgb(132, 133, 224);
+    }
+    .heading {
+      margin-top: 3px;
+      padding: 5px;
+      margin: 3px;
+      height: 50px;
+
+      width: 120px;
+      border: 0px solid black;
+      box-shadow: 0px 2px 4px;
+      border-radius: 10px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1 class="heading" id="h-1"></h1>
+      <h1 class="heading" id="h-2"></h1>
+      <h1 class="heading" id="h-3"></h1>
+      <h1 class="heading" id="h-4"></h1>
+      <h1 class="heading" id="h-5"></h1>
+    </div>
+  </body>
+  <script>
+    const h_1 = document.querySelector("#h-1");
+    const h_2 = document.querySelector("#h-2");
+    const h_3 = document.querySelector("#h-3");
+    const h_4 = document.querySelector("#h-4");
+    const h_5 = document.querySelector("#h-5");
+    function change_data(element, color, text, time) {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          if (element) {
+            element.style.color = color;
+            element.textContent = text;
+
+            resolve("data");
+          } else {
+            reject("error occured ");
+          }
+        }, time);
+      });
+    }
+    change_data(h_1, "red", "one", 1000)
+      .then(() => change_data(h_2, "blue", "two", 1000))
+      .then(() => change_data(h_3, "orange", "three", 1000))
+      .then(() => change_data(h_4, "green", "four", 1000))
+      .then(() => change_data(h_5, "purple", "five", 1000))
+      .catch((Error) => {
+        console.log(alert("error"));
+      });
+  </script>
+</html>
