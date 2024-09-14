@@ -1,0 +1,38 @@
+<!-- setInterval and clearInterval -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>AMAN MAURYA</h1>
+    <button id="btn_start">start</button>
+    <button id="btn_stop">stop</button>
+  </body>
+  <script>
+    const btn_start = document.querySelector("#btn_start");
+    const btn_stop = document.querySelector("#btn_stop");
+    let intervalId;
+    const start_count = function () {
+      console.log("interval started");
+    };
+
+    btn_start.addEventListener("click", () => {
+      if (!intervalId) {
+        intervalId = setInterval(start_count, 1000);
+        // console.log("Interval started");
+      }
+    });
+
+    btn_stop.addEventListener("click", () => {
+      if (intervalId) {
+        clearInterval(intervalId);
+        intervalId = null; // Reset the intervalId
+        console.log("Interval stopped");
+      }
+    });
+  </script>
+</html>

@@ -1,0 +1,20 @@
+button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  box-shadow: 0px 0px 10px #410202;
+  transition: all 0.4s;
+  border-radius: 20px;
+}
+
+button:hover {
+  background-color: #fffbeb;
+  color: rgb(234, 23, 23);
+  font-size: 1.2rem;
+}

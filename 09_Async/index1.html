@@ -1,0 +1,27 @@
+<!-- setTimeout and clearTimeout -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>AMAN MAURYA</h1>
+    <button id="btn">stop</button>
+  </body>
+  <script>
+    const changeText = function () {
+      document.querySelector("h1").innerText = "Aman";
+    };
+    // // here we provide only provide reference of the functions
+    // // if we press the stop button before 2s then event will be stop.
+    const timeout_id = setTimeout(changeText, 2000);
+
+    document.querySelector("#btn").addEventListener("click", function () {
+      clearTimeout(timeout_id);
+      console.log("stop");
+    });
+  </script>
+</html>
